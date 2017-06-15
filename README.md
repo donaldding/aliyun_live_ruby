@@ -22,7 +22,36 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+```ruby
+require 'aliyun_live'
+
+client = AliyunLive::Client.new(your_access_id, your_access_secret)
+```
+
+查询推流在线列表
+```ruby
+client.describeLiveStreamsOnlineList(domain_name, app_name)
+```
+
+查询推流在线列表
+```ruby
+client.describeLiveStreamOnlineUserNum(domain_name, app_name, stream_name(optional))
+```
+
+禁止直播推流
+```ruby
+client.forbidLiveStream(domain_name', app_name, stream_name,resume_time)
+```
+
+恢复直播推流
+```ruby
+client.resumeLiveStream(domain_name, app_name, stream_name)
+```
+
+查询推流黑名单
+```ruby
+client.describeLiveStreamsBlockList(domain_name)
+```
 
 ## Development
 

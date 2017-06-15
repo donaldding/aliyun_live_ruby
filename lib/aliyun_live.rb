@@ -53,7 +53,16 @@ module AliyunLive
       params[:LiveStreamType] = 'publisher' 
       http_get(params)
     end
-
+    
+    def resumeLiveStream(domain_name, app_name, stream_name)
+      params = {}
+      params[:Action] = 'DescribeLiveStreamOnlineUserNum'
+      params[:DomainName] = domain_name
+      params[:AppName] = app_name
+      params[:StreamName] = stream_name
+      params[:LiveStreamType] = 'publisher' 
+      http_get(params)
+    end
 
 
     def sign(method,params)

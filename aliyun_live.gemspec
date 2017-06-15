@@ -11,7 +11,7 @@ Gem::Specification.new do |spec|
 
   spec.summary       = "aliyun live sdk" 
   spec.description   = "aliyun live sdk"
-  spec.homepage      = "http://monkeytech.com"
+  spec.homepage      = "https://github.com/donaldding/aliyun_live_ruby"
   spec.license       = "MIT"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
@@ -23,9 +23,10 @@ Gem::Specification.new do |spec|
       "public gem pushes."
   end
 
-  spec.files         = `git ls-files -z`.split("\x0").reject do |f|
-    f.match(%r{^(test|spec|features)/})
-  end
+  # spec.files         = `git ls-files -z`.split("\x0").reject do |f|
+  #   f.match(%r{^(test|spec|features)/})
+  # end
+  spec.files         = `git ls-files`.split("\n")
   spec.bindir        = "exe"
   spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
   spec.require_paths = ["lib"]
