@@ -1,8 +1,10 @@
 # AliyunLive
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/aliyun_live`. To experiment with that code, run `bin/console` for an interactive prompt.
+ 阿里云直播服务gem， 非官方。
 
-TODO: Delete this and the text above, and describe your gem
+ 只是按照项目需求接了几个api，并没有把全部接口都接进来，
+
+ 具体接口和返回数据格式请参照[阿里云直播服务文档](https://help.aliyun.com/document_detail/48207.html?spm=5176.doc35414.6.570.VvlMr9)
 
 ## Installation
 
@@ -33,9 +35,9 @@ client = AliyunLive::Client.new(your_access_id, your_access_secret)
 client.describeLiveStreamsOnlineList(domain_name, app_name)
 ```
 
-查询推流在线列表
+查询在线用户列表
 ```ruby
-client.describeLiveStreamOnlineUserNum(domain_name, app_name, stream_name(optional))
+client.describeLiveStreamOnlineUserNum(domain_name, app_name, stream_name)
 ```
 
 禁止直播推流
@@ -52,6 +54,8 @@ client.resumeLiveStream(domain_name, app_name, stream_name)
 ```ruby
 client.describeLiveStreamsBlockList(domain_name)
 ```
+
+
 
 ## Development
 
