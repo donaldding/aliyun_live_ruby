@@ -7,6 +7,8 @@ require 'date'
 require 'net/http'
 require 'uri'
 require 'json'
+require 'securerandom'
+
 
 include ERB::Util
 module AliyunLive
@@ -104,7 +106,7 @@ module AliyunLive
       params[:SignatureMethod] = 'HMAC-SHA1'
       params[:Timestamp] = Time.now.getutc.strftime("%FT%T")
       params[:SignatureVersion] = '1.0'
-      params[:SignatureNonce] = "#{Time.now.to_i}"
+      params[:SignatureNonce] = SecureRandom.uuid
       params
     end
   end
