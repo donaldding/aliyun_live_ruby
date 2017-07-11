@@ -42,7 +42,7 @@ client.describeLiveStreamOnlineUserNum(domain_name, app_name, stream_name)
 
 禁止直播推流
 ```ruby
-client.forbidLiveStream(domain_name', app_name, stream_name,resume_time)
+client.forbidLiveStream(domain_name, app_name, stream_name,resume_time)
 ```
 
 恢复直播推流
